@@ -22,11 +22,11 @@ module "my" {
 
 This repo has the following folder structure:
 
-- [examples](https://github.com/thoughtgears/gcp-xxx-modules/examples): The example folder contains an one or more examples of how to use the modules.
+- [examples](https://github.com/thoughtgears/terraform-gcp-project/examples): The example folder contains an one or more examples of how to use the modules.
 
-- [root](https://github.com/thoughtgears/gcp-xxx-modules/blob/main): This root contains the module code.
+- [root](https://github.com/thoughtgears/terraform-gcp-project/blob/main): This root contains the module code.
 
-- [test](https://github.com/thoughtgears/gcp-xxx-modules/blob/main/test): Automated tests modules and examples.
+- [test](https://github.com/thoughtgears/terraform-gcp-project/blob/main/test): Automated tests modules and examples.
 
 ## What's a Module?
 
