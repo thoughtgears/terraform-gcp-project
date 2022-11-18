@@ -47,6 +47,56 @@ Once we hit `1.0.0`, we will make every effort to maintain a backwards compatibl
 ## Module resource documentation
 
 <!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.1 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 4.0.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.4.3 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_google"></a> [google](#provider\_google) | >= 4.0.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | >= 3.4.3 |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_labels"></a> [labels](#module\_labels) | git@github.com:thoughtgears/terraform-gcp-labels.git | v1.0.0 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [google_project.this](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project) | resource |
+| [google_project_service.this](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
+| [random_integer.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_auto_create_default_network"></a> [auto\_create\_default\_network](#input\_auto\_create\_default\_network) | Option to remove the default network on project creation. | `bool` | `false` | no |
+| <a name="input_billing_id"></a> [billing\_id](#input\_billing\_id) | ID of the billing account associated with the organization | `string` | n/a | yes |
+| <a name="input_custom_labels"></a> [custom\_labels](#input\_custom\_labels) | A map of key/pair values to use for custom project labels | `map(string)` | `{}` | no |
+| <a name="input_organization_id"></a> [organization\_id](#input\_organization\_id) | Google Cloud Platform Organization ID | `string` | n/a | yes |
+| <a name="input_project_config"></a> [project\_config](#input\_project\_config) | Project configuration to define the project. Needs a name that will be concatenated with a random 5 digit string to make the project ID.<br>If a folder is specified it will create a folder based on the parent folder described, else it will create a project at the top level of the<br>organization.<br>If apis are defined they will be concatenated with a list of default API:s to enable during project creation. | <pre>object({<br>    name         = string<br>    folder_id    = optional(string)<br>    service_apis = optional(list(string))<br>  })</pre> | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_billing_id"></a> [billing\_id](#output\_billing\_id) | n/a |
+| <a name="output_folder"></a> [folder](#output\_folder) | n/a |
+| <a name="output_id"></a> [id](#output\_id) | n/a |
+| <a name="output_labels"></a> [labels](#output\_labels) | n/a |
+| <a name="output_name"></a> [name](#output\_name) | n/a |
+| <a name="output_number"></a> [number](#output\_number) | n/a |
+| <a name="output_organization_id"></a> [organization\_id](#output\_organization\_id) | n/a |
 <!-- END_TF_DOCS -->
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
