@@ -10,7 +10,7 @@ resource "random_integer" "this" {
 }
 
 module "labels" {
-  source       = "../labels"
+  source       = "git@github.com:thoughtgears/terraform-gcp-labels.git?ref=v1.0.0"
   project_name = var.project_config.name
   custom       = var.custom_labels
 }
@@ -24,4 +24,6 @@ resource "google_project" "this" {
   project_id      = local.project_id
   billing_account = var.billing_id
   labels          = module.labels.all
+
+  auto_create_network = var.auto_create_default_network
 }

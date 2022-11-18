@@ -68,7 +68,7 @@ Once we hit `1.0.0`, we will make every effort to maintain a backwards compatibl
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | ../labels | n/a |
+| <a name="module_labels"></a> [labels](#module\_labels) | git@github.com:thoughtgears/terraform-gcp-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -82,6 +82,7 @@ Once we hit `1.0.0`, we will make every effort to maintain a backwards compatibl
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_auto_create_default_network"></a> [auto\_create\_default\_network](#input\_auto\_create\_default\_network) | Option to remove the default network on project creation. | `bool` | `false` | no |
 | <a name="input_billing_id"></a> [billing\_id](#input\_billing\_id) | ID of the billing account associated with the organization | `string` | n/a | yes |
 | <a name="input_custom_labels"></a> [custom\_labels](#input\_custom\_labels) | A map of key/pair values to use for custom project labels | `map(string)` | `{}` | no |
 | <a name="input_organization_id"></a> [organization\_id](#input\_organization\_id) | Google Cloud Platform Organization ID | `string` | n/a | yes |

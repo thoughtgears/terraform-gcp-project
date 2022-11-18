@@ -78,3 +78,9 @@ variable "custom_labels" {
   description = "A map of key/pair values to use for custom project labels"
   default     = {}
 }
+
+variable "auto_create_default_network" {
+  type        = bool
+  description = "Option to remove the default network on project creation."
+  default     = false
+}
